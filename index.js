@@ -23,6 +23,10 @@ app.get('/category/:cateId', (req, res) => {
     }
 })
 
+app.get('/news', (req, res) => {
+    res.send(news)
+})
+
 app.get('/news/:newsId', (req, res) => {
     const id = req.params.newsId;
     const selectedItems = news.find(n => n._id === id);
